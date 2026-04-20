@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LGAC Biología Molecular y Fitopatología - INBIOTECA Universidad Veracruzana">
-    <meta name="keywords" content="fitopatología, biología molecular, INBIOTECA, Universidad Veracruzana, BioMolFito, sanidad vegetal, biocontrol">
+    <meta name="keywords" content="fitopatología, biología molecular, INBIOTECA, Universidad Veracruzana, BioMolFito, sanidad vegetal, biocontrol, podcast">
     <meta name="author" content="Dr. Juan Carlos Noa-Carrazana">
     <title>BioMolFito | INBIOTECA - Universidad Veracruzana</title>
     <style>
@@ -18,18 +18,18 @@
         header { 
             background: #155724; 
             color: white; 
-            padding: 2rem 0; 
+            padding: 2.5rem 0; 
             text-align: center; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         header h1 { 
-            font-size: 2.5rem; 
+            font-size: 2.8rem; 
             margin-bottom: 0.5rem; 
             font-weight: 700;
         }
         header p { 
-            font-size: 1.1rem; 
-            opacity: 0.9; 
+            font-size: 1.2rem; 
+            opacity: 0.95; 
         }
         .container { 
             max-width: 1200px; 
@@ -39,22 +39,29 @@
         .card { 
             background: white; 
             padding: 2.5rem; 
-            margin-bottom: 2rem; 
-            border-radius: 12px; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2.5rem; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card h2 { 
             color: #155724; 
             margin-bottom: 1.5rem; 
-            border-bottom: 3px solid #4e9f3d; 
+            border-bottom: 4px solid #4e9f3d; 
             padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .card p, .card li { 
-            color: #555; 
-            font-size: 1.05rem; 
+            color: #444; 
+            font-size: 1.1rem; 
         }
         .card ul { 
-            margin-left: 1.5rem; 
+            margin-left: 1.8rem; 
             margin-top: 1rem; 
         }
         .card ul li { 
@@ -62,20 +69,22 @@
         }
         .team-members { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 1.5rem; 
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 2rem;
         }
         .member { 
-            background: #f8f9fa; 
-            padding: 1.5rem; 
-            border-radius: 8px; 
+            background: #fdfdfd; 
+            padding: 2rem; 
+            border-radius: 12px; 
             text-align: center; 
-            border: 2px solid #4e9f3d;
+            border: 2px solid #e9ecef;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         .member h3 { 
             color: #155724; 
             margin-bottom: 0.5rem; 
+            font-size: 1.3rem;
         }
         .badges { 
             display: flex; 
@@ -87,43 +96,86 @@
         .badge { 
             background: #4e9f3d; 
             color: white; 
-            padding: 0.5rem 1.2rem; 
-            border-radius: 20px; 
+            padding: 0.6rem 1.4rem; 
+            border-radius: 25px; 
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .podcast-section {
+            background: #f8f9fa;
+            border-left: 8px solid #155724;
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 1rem;
+        }
+        .podcast-player {
+            width: 100%;
+            height: 160px;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 2px dashed #adb5bd;
+            color: #6c757d;
+            font-style: italic;
         }
         .links { 
             display: flex; 
             flex-wrap: wrap; 
-            gap: 1rem; 
+            gap: 1.2rem; 
             margin-top: 1.5rem;
         }
         .links a { 
             background: #155724; 
             color: white; 
-            padding: 0.8rem 1.5rem; 
+            padding: 1rem 1.8rem; 
             text-decoration: none; 
-            border-radius: 6px; 
-            transition: background 0.3s;
-            font-weight: 500;
+            border-radius: 8px; 
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-align: center;
+            min-width: 180px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .links a:hover { 
             background: #0d3d19; 
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
         footer { 
             background: #155724; 
             color: white; 
             text-align: center; 
-            padding: 2rem; 
-            margin-top: 3rem;
+            padding: 3rem 2rem; 
+            margin-top: 4rem;
         }
         footer a { 
-            color: #4e9f3d; 
+            color: #98ddca; 
             text-decoration: none; 
             font-weight: 600;
         }
         footer a:hover { 
             text-decoration: underline; 
+        }
+        .nav-quick {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #4e9f3d;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -131,81 +183,115 @@
     <header>
         <h1>L2-BioMolFito</h1>
         <p>Biología Molecular y Fitopatología</p>
-        <p style="font-size: 0.95rem; margin-top: 0.5rem; opacity: 0.85;">INBIOTECA | Universidad Veracruzana | Xalapa, Ver., México</p>
+        <p style="font-size: 1rem; margin-top: 0.8rem; opacity: 0.9;">INBIOTECA | Universidad Veracruzana | Xalapa, Ver., México</p>
     </header>
 
     <div class="container">
+        <!-- SECCIÓN: ACERCA DE -->
         <div class="card">
             <h2>🌿 Acerca de BioMolFito</h2>
             <p>
                 La <strong>Línea de Generación y Aplicación del Conocimiento (LGAC) Biología Molecular y Fitopatología</strong> 
-                es una línea consolidada que constituye la <strong>L2</strong> del Cuerpo Académico UV-CA-234 
-                "Biotecnología Aplicada a la Ecología y Sanidad Vegetal" del <strong>Instituto de Biotecnología y Ecología Aplicada (INBIOTECA)</strong>, 
+                es una línea consolidada (<strong>L2</strong>) del Cuerpo Académico UV-CA-234 
+                "Biotecnología Aplicada a la Ecología y Sanidad Vegetal" en el <strong>Instituto de Biotecnología y Ecología Aplicada (INBIOTECA)</strong> de la 
                 Universidad Veracruzana.
             </p>
-            <p style="margin-top: 1rem;">
-                En <strong>2025 celebramos 20 años</strong> de la L2-BioMolFito con <strong>más de 60 tesis concluidas</strong> 
-                en todos los niveles: licenciatura, maestría y doctorado.
+            <p style="margin-top: 1.2rem;">
+                Con <strong>más de 20 años de trayectoria (2005-2025)</strong>, el grupo ha liderado la investigación en sanidad vegetal en el trópico mexicano, 
+                formando recursos humanos de excelencia con <strong>más de 60 tesis concluidas</strong> en todos los niveles académicos.
             </p>
             
             <div class="badges">
                 <span class="badge">🏆 20 años de trayectoria (2005-2025)</span>
                 <span class="badge">🎓 60+ tesis dirigidas</span>
-                <span class="badge">🔬 SNI Nivel 1</span>
-                <span class="badge">✅ PRODEP</span>
+                <span class="badge">✅ Reconocimiento PRODEP</span>
+                <span class="badge">🧬 L2 consolidada</span>
             </div>
         </div>
 
+        <!-- SECCIÓN: PODCAST (NUEVO) -->
         <div class="card">
-            <h2>👥 Equipo de Investigación</h2>
+            <h2>🎙️ Podcast BioMolFito: Raíces del Conocimiento</h2>
+            <div class="podcast-section">
+                <p><strong>🎧 Nueva serie de divulgación científica.</strong></p>
+                <p>Acompañe a nuestros investigadores en un recorrido por los desafíos de la agricultura moderna, la sanidad vegetal y las innovaciones biotecnológicas desde el corazón de Veracruz.</p>
+                
+                <div class="podcast-player">
+                    [Reproductor de Podcast - Próximamente en Spotify y Apple Podcasts]
+                </div>
+                
+                <p style="font-size: 0.95rem;"><em>Temas destacados: Virus fitopatógenos, Biocontrol con hongos entomopatógenos, Rescate de la vainilla y Sanidad en cítricos.</em></p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: EQUIPO -->
+        <div class="card">
+            <h2>👥 Equipo de Investigación Responsable</h2>
             <div class="team-members">
                 <div class="member">
                     <h3>Dr. Juan Carlos Noa-Carrazana</h3>
-                    <p>Investigador Titular</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">jnoa@uv.mx</p>
+                    <p><strong>Investigador Titular</strong></p>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; color: #155724; font-weight: 600;">📧 jnoa@uv.mx</p>
                 </div>
                 <div class="member">
                     <h3>Dra. Norma Flores-Estévez</h3>
-                    <p>Investigadora</p>
+                    <p><strong>Investigadora</strong></p>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; color: #666;">LGAC: Biocontrol y Sanidad Vegetal</p>
                 </div>
                 <div class="member">
                     <h3>Dra. Clara Córdova-Nieto</h3>
-                    <p>Investigadora</p>
+                    <p><strong>Investigadora</strong></p>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; color: #666;">LGAC: Fitopatología y Micología</p>
                 </div>
             </div>
         </div>
 
+        <!-- SECCIÓN: ÁREAS -->
         <div class="card">
-            <h2>🔬 Áreas de Investigación</h2>
-            <ul>
-                <li><strong>Sanidad vegetal</strong> y diagnóstico molecular de fitopatógenos</li>
-                <li><strong>Biocontrol</strong> de patógenos vegetales (hongos, bacterias, virus)</li>
-                <li><strong>Biofertilización</strong> y microorganismos promotores del crecimiento vegetal</li>
-                <li>Interacciones <strong>planta-patógeno</strong> a nivel molecular</li>
-                <li>Virus fitopatógenos: PRSV, badnavirus, virus endógenos</li>
-                <li>Hongos fitopatógenos: <em>Fusarium</em>, <em>Lasiodiplodia</em>, <em>Colletotrichum</em></li>
-                <li>Cultivos de importancia económica: vainilla, papaya, mango, plátano, cítricos</li>
-            </ul>
+            <h2>🔬 Líneas y Áreas de Investigación</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <ul>
+                        <li><strong>Detección y Diagnóstico Molecular:</strong> Virus (PRSV, badnavirus), Hongos (Fusarium, Lasiodiplodia) y Fitoplasmas.</li>
+                        <li><strong>Biocontrol de Patógenos:</strong> Uso de hongos entomopatógenos (<em>Metarhizium</em>, <em>Lecanicillium</em>) y extractos vegetales.</li>
+                        <li><strong>Biofertilización:</strong> Microorganismos promotores del crecimiento vegetal (PGPR) y micorrizas.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>Sistemas Agrícolas Clave:</strong> Vainilla, Papaya, Mango, Cítricos, Plátano y Café.</li>
+                        <li><strong>Biotecnología Aplicada:</strong> Desarrollo de patentes y estrategias sustentables para la sanidad vegetal.</li>
+                        <li><strong>Interacción Planta-Patógeno:</strong> Expresión génica y factores de transcripción (WRKY).</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
+        <!-- SECCIÓN: ENLACES -->
         <div class="card">
-            <h2>🔗 Enlaces y Recursos</h2>
+            <h2>🔗 Ecosistema Digital BioMolFito</h2>
             <div class="links">
-                <a href="https://www.uv.mx/personal/jnoa/" target="_blank">Sitio Personal UV</a>
-                <a href="https://www.uv.mx/personal/jnoa/noticias-biomolfito/" target="_blank">Blog Noticias BioMolFito</a>
-                <a href="https://www.uv.mx/inbioteca/" target="_blank">INBIOTECA</a>
-                <a href="https://scholar.google.com.mx/citations?user=oHdHBYcAAAAJ" target="_blank">Google Scholar</a>
-                <a href="https://orcid.org/0000-0001-8126-8954" target="_blank">ORCID</a>
-                <a href="https://www.researchgate.net/profile/Juan_Carlos_Noa-Carrazana" target="_blank">ResearchGate</a>
+                <a href="https://www.uv.mx/personal/jnoa/" target="_blank">📄 Sitio Personal UV</a>
+                <a href="https://www.uv.mx/personal/jnoa/noticias-biomolfito/" target="_blank">📰 Blog Noticias BioMolFito</a>
+                <a href="https://scholar.google.com.mx/citations?user=oHdHBYcAAAAJ" target="_blank">📊 Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-8126-8954" target="_blank">🆔 Perfil ORCID</a>
+                <a href="https://www.researchgate.net/profile/Juan_Carlos_Noa-Carrazana" target="_blank">🧪 ResearchGate</a>
+                <a href="https://www.uv.mx/inbioteca/" target="_blank">🏫 Portal INBIOTECA</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><strong>L2-BioMolFito</strong> | INBIOTECA - Universidad Veracruzana</p>
+        <p style="font-size: 1.3rem; margin-bottom: 1rem;"><strong>LGAC BioMolFito</strong></p>
+        <p>Instituto de Biotecnología y Ecología Aplicada (INBIOTECA) - Universidad Veracruzana</p>
         <p style="margin-top: 0.5rem;">Av. de las Culturas Veracruzanas #101, Col. Emiliano Zapata, CP. 91090, Xalapa, Ver., México</p>
-        <p style="margin-top: 0.5rem;">Tel: (+52) 228 842 1700 Ext. 10878 | <a href="mailto:jnoa@uv.mx">jnoa@uv.mx</a></p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 BioMolFito. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem;">📞 (+52) 228 842 1700 Ext. 10878 | 📧 <a href="mailto:jnoa@uv.mx">jnoa@uv.mx</a></p>
+        <hr style="width: 100px; margin: 2rem auto; border: 1px solid rgba(255,255,255,0.2);">
+        <p style="font-size: 0.9rem; opacity: 0.8;">© 2026 Grupo de Investigación BioMolFito. Todos los derechos reservados.</p>
     </footer>
+
+    <div class="nav-quick" title="Subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ▲
+    </div>
 </body>
 </html>

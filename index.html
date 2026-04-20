@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LGAC Biología Molecular y Fitopatología - INBIOTECA Universidad Veracruzana">
-    <meta name="keywords" content="fitopatología, biología molecular, INBIOTECA, Universidad Veracruzana, BioMolFito, sanidad vegetal, biocontrol, podcast">
+    <meta name="keywords" content="fitopatología, biología molecular, INBIOTECA, Universidad Veracruzana, BioMolFito, sanidad vegetal, biocontrol, podcast, noticias">
     <meta name="author" content="Dr. Juan Carlos Noa-Carrazana">
     <title>BioMolFito | INBIOTECA - Universidad Veracruzana</title>
     <style>
@@ -31,9 +31,43 @@
             font-size: 1.2rem; 
             opacity: 0.95; 
         }
+        
+        /* BANNER DE NOTICIAS */
+        .news-banner {
+            background: #fff3cd;
+            border-bottom: 2px solid #ffeeba;
+            color: #856404;
+            padding: 0.8rem 1rem;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .news-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        .news-label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #dc3545;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            z-index: 10;
+            font-weight: 700;
+            box-shadow: 4px 0 8px rgba(0,0,0,0.1);
+        }
+
         .container { 
             max-width: 1200px; 
-            margin: 3rem auto; 
+            margin: 2rem auto; 
             padding: 0 2rem; 
         }
         .card { 
@@ -98,7 +132,7 @@
             color: white; 
             padding: 0.6rem 1.4rem; 
             border-radius: 25px; 
-            font-weight: 600;
+            font-weight: 600; 
             font-size: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -186,6 +220,17 @@
         <p style="font-size: 1rem; margin-top: 0.8rem; opacity: 0.9;">INBIOTECA | Universidad Veracruzana | Xalapa, Ver., México</p>
     </header>
 
+    <!-- BANNER DE NOTICIAS -->
+    <div class="news-banner">
+        <div class="news-label">ÚLTIMAS NOTICIAS</div>
+        <div class="news-content">
+            📢 ¡Bienvenidos al nuevo portal BioMolFito en GitHub! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            🎙️ Estreno del Podcast "Raíces del Conocimiento" próximamente en todas las plataformas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            🎓 Celebrando 20 años de excelencia académica en Sanidad Vegetal (2005-2025). &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            📄 Nuevas publicaciones 2026 disponibles en la sección de recursos.
+        </div>
+    </div>
+
     <div class="container">
         <!-- SECCIÓN: ACERCA DE -->
         <div class="card">
@@ -209,7 +254,7 @@
             </div>
         </div>
 
-        <!-- SECCIÓN: PODCAST (NUEVO) -->
+        <!-- SECCIÓN: PODCAST -->
         <div class="card">
             <h2>🎙️ Podcast BioMolFito: Raíces del Conocimiento</h2>
             <div class="podcast-section">
